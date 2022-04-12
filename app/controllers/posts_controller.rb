@@ -72,8 +72,20 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :content, :user_id)
     end
-    
+
     class PostsController < ApplicationController
       before_action :check_authenticated, except: [:show, :index]
     
 end
+
+
+rbenv init
+echo eval "$(rbenv init -)" >> .bashrc
+cat ~/.bashrc
+source ~/.bashrc
+
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+rbenv install 2.7.3
+cd ../<my-app-folder>
+rbenv local 2.7.3
